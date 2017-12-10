@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class DictionaryService {
 
   private Set<String> dictionary = new HashSet<>();
-  private int maxLenght = 0;
+  private int maxLength = 0;
 
   /**
    * Fill the dictionary set by sorted words from file
@@ -31,8 +31,8 @@ public class DictionaryService {
       String word;
       while ((word = br.readLine()) != null) {
         dictionary.add(sortString(word));
-        if (maxLenght < word.length()) {
-          maxLenght = word.length();
+        if (maxLength < word.length()) {
+          maxLength = word.length();
         }
       }
       br.close();
@@ -45,8 +45,8 @@ public class DictionaryService {
     return dictionary.contains(sortString(word));
   }
 
-  public int getTheLongestWordSize() {
-    return maxLenght;
+  public int getTheLongestWordLength() {
+    return maxLength;
   }
 
   private String sortString(String string) {

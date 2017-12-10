@@ -24,7 +24,13 @@ public class SentenceCheckerTest {
     sentence = "iahveacra";
     assertTrue(sentenceChecker.isValidSentence(sentence));
 
+    sentence = "a";
+    assertTrue(sentenceChecker.isValidSentence(sentence));
+
     sentence = "ihaveaca";
+    assertFalse(sentenceChecker.isValidSentence(sentence));
+
+    sentence = "iaveacar";
     assertFalse(sentenceChecker.isValidSentence(sentence));
   }
 }
