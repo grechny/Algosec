@@ -21,7 +21,7 @@ public class SentenceCheckerTest {
     String sentence = "ihaveacar";
     assertTrue(sentenceChecker.isValidSentence(sentence));
 
-    sentence = "iahveacra";
+    sentence = "IahveaCra";
     assertTrue(sentenceChecker.isValidSentence(sentence));
 
     sentence = "a";

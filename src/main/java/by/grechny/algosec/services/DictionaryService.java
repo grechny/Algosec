@@ -50,7 +50,7 @@ public class DictionaryService {
   }
 
   private String sortString(String string) {
-    char[] charArray = string.toCharArray();
+    char[] charArray = string.toLowerCase().toCharArray();
     Arrays.sort(charArray);
     return String.valueOf(charArray);
   }
